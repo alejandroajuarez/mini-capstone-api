@@ -5,17 +5,19 @@ class Product < ApplicationRecord
   validates :price, numericality: { greater_than: 0 }
   validates :description, presence: true
   validates :description, length: { in: 5..500 }
-end
 
-def is_discounted?
-  if price < 10
+  def is_discounted?
+    if price < 10
+    end
   end
-end
 
-def tax
-  (price * 0.09).round(2)
-end
+  def tax
+    (price * 0.09).round(2)
+  end
 
-def total
-  (tax + price).round(2)
+  def total
+    (tax + price).round(2)
+  end
+
+  belongs_to :supplier
 end
