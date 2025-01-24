@@ -6,6 +6,8 @@ class Product < ApplicationRecord
   validates :description, presence: true
   validates :description, length: { in: 5..500 }
 
+  belongs_to :supplier
+  
   def is_discounted?
     if price < 10
     end
@@ -19,5 +21,4 @@ class Product < ApplicationRecord
     (tax + price).round(2)
   end
 
-  belongs_to :supplier
 end
