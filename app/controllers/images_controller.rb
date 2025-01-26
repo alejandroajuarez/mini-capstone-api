@@ -36,7 +36,6 @@ class ImagesController < ApplicationController
   def destroy
     image = Image.find_by(id: params[:id])
     image.destroy
-    render json: {message: "Entry has been deleted" }
+    render json: { message: "Entry has been deleted" }
   end
 end
-
