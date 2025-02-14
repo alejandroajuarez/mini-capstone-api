@@ -3,6 +3,8 @@ class Product < ApplicationRecord
   validates :name, uniqueness: true
   validates :price, presence: true
   validates :price, numericality: { greater_than: 0 }
+  validates :quantity, presence: true
+  validates :quantity, numericality: { greater_than: 0 }
   validates :description, presence: true
   validates :description, length: { in: 5..500 }
 
@@ -20,5 +22,4 @@ class Product < ApplicationRecord
   def total
     (tax + price).round(2)
   end
-
 end
