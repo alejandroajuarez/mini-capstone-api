@@ -35,7 +35,8 @@ Rails.application.routes.draw do
 
   get "/categories"    => "categories#index"
 
-  get "/cart/:id"      => "cart#show"
-  post "/cart"         => "cart#create"
-  delete "/cart/:id"   => "cart#destroy"
+  get "carted_products"           => "carted_products#index"
+  get "/carted_products/:id"      => "carted_products#show"
+  post "/carted_products"         => "carted_products#create"
+  delete "/carted_products/:id"   => "carted_products#destroy"
 end
