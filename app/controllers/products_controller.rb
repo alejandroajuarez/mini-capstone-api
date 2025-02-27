@@ -2,7 +2,8 @@ class ProductsController < ApplicationController
   def index
     pp current_user
     puts "===================="
-    @products = Product.all
+    # @products = Product.all
+    @products = Product.where("name LIKE ?", "%#{params[:search]}%")
     render :index
   end
 
