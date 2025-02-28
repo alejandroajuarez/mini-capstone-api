@@ -6,7 +6,7 @@ class CategoriesController < ApplicationController
   end
   
   def show
-    @categories = Category.find_by(product_id: params[:id])
+    @category = Category.find_by(id: params[:id])
     render :show
    end
 end
