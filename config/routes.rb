@@ -36,6 +36,8 @@ Rails.application.routes.draw do
   get "/categories"     => "categories#index"
   get "/categories/:id" => "categories#show"
 
+  post "/category_products" => "category_products#create"
+
   get "carted_products"           => "carted_products#index"
   get "/carted_products/:id"      => "carted_products#show"
   post "/carted_products"         => "carted_products#create"

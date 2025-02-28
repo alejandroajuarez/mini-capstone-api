@@ -11,3 +11,5 @@ json.supplier_id    product.supplier.id
 json.supplier_name  product.supplier.supplier_name
 json.email          product.supplier.email
 json.phone_number   product.supplier.phone_number
+
+json.categories     product.categories
